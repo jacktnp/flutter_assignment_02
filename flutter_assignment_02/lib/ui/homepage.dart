@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../model/database.dart';
 
-class TodoList extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new TodoListState();
+    return new HomePageState();
   }
 }
 
-class TodoListState extends State {
+class HomePageState extends State {
   int _index = 0;
 
   List<Todo> _todoItems = List();
@@ -16,7 +16,7 @@ class TodoListState extends State {
 
   TodoProvider _db;
 
-  TodoListState() {
+  HomePageState() {
     _db = TodoProvider();
   }
 
@@ -87,7 +87,7 @@ class TodoListState extends State {
       IconButton(
         icon: Icon(Icons.add),
         onPressed: () {
-          Navigator.pushNamed(context, '/add');
+          Navigator.pushNamed(context, '/addlist');
         },
       ),
       IconButton(

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import '../model/database.dart';
 
-class AddTodo extends StatefulWidget {
+class NewList extends StatefulWidget {
   @override
-  _AddTodoState createState() => _AddTodoState();
+  _NewListState createState() => _NewListState();
 }
 
-class _AddTodoState extends State<AddTodo> {
+class _NewListState extends State<NewList> {
   final _formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   TodoProvider _db;
 
-  _AddTodoState() {
+  _NewListState() {
     _db = TodoProvider();
   }
 
@@ -58,7 +58,7 @@ class _AddTodoState extends State<AddTodo> {
       body: Form(
         key: _formKey,
         child: Container(
-          padding: EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(10.0),
           child: ListView(
             children: <Widget>[
               todoTextField,

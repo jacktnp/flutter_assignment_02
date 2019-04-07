@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './ui/homescreen.dart';
+import './ui/homepage.dart';
 import './ui/addlist.dart';
 
 void main() => runApp(MyApp());
@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green
+        primarySwatch: Colors.teal
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => TodoList(),
-        '/add': (context) => AddTodo(),
+        '/': (context) => HomePage(),
+        '/addlist': (context) => NewList(),
       },
     );
   }
