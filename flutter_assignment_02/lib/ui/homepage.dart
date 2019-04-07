@@ -91,7 +91,7 @@ class HomePageState extends State {
         },
       ),
       IconButton(
-        icon: Icon(Icons.delete),
+        icon: Icon(Icons.delete_forever),
         onPressed: () {
           _db.deleteDone().then((_) {
             getDone();
