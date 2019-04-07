@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         '/addlist': (context) => NewList(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
