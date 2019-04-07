@@ -83,7 +83,7 @@ class HomePageState extends State {
             )
     ];
 
-    final List topBar = <Widget>[
+    final List menuTab = <Widget>[
       IconButton(
         icon: Icon(Icons.add),
         onPressed: () {
@@ -103,16 +103,23 @@ class HomePageState extends State {
     return new Scaffold(
       appBar: AppBar(
         title: Text("Todo"),
-        actions: <Widget>[topBar[_index]],
+        actions: <Widget>[menuTab[_index]],
         automaticallyImplyLeading: false,
       ),
-      body: Center(child: _children[_index]),
+      body: Center(
+        child: _children[_index]
+        ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('Task')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.done_all), title: Text("Completed"))
+            icon: Icon(Icons.list),
+            title: Text("Task")
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.done_all),
+            title: Text("Completed")
+          )
         ],
         onTap: (int index) {
           setState(() {

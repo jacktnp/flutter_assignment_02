@@ -37,7 +37,7 @@ class _NewListState extends State<NewList> {
         }
       },
     );
-
+    
     RaisedButton submitButton = RaisedButton(
       child: const Text('Save'), color: Colors.teal[100],
       onPressed: () {
