@@ -33,7 +33,7 @@ class _NewListState extends State<NewList> {
       ),
       validator: (value) {
         if (value.isEmpty) {
-          return 'Please fill text';
+          return 'Please fill subject';
         }
       },
     );
