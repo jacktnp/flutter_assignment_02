@@ -29,17 +29,17 @@ class _NewListState extends State<NewList> {
     TextFormField todoTextField = TextFormField(
       controller: subjectController,
       decoration: InputDecoration(
-        hintText: "Subject",
+        labelText: "Subject"
       ),
       validator: (value) {
         if (value.isEmpty) {
-          return 'Please enter text';
+          return 'Please fill text';
         }
       },
     );
 
     RaisedButton submitButton = RaisedButton(
-      child: const Text('Save'),
+      child: const Text('Save'), color: Colors.teal[100],
       onPressed: () {
         if (_formKey.currentState.validate()) {
           Todo todo = Todo(subject: subjectController.text);
